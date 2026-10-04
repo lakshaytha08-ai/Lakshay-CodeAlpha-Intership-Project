@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credit-risk-classification-demo"
+version = "0.1.0"
+description = "A synthetic-data credit-risk classification learning project"
+requires-python = ">=3.10"
+dependencies = [
+    "joblib>=1.4,<2",
+    "matplotlib>=3.9,<4",
+    "pandas>=2.2,<4",
+    "scikit-learn>=1.5,<2",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
